@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rollout-canary
+  namespace: default
+spec:
+  project: rollout-canary
+  source:
+    repoURL: https://github.com/soura49/argocd.git
+    targetRevision: master
+    path: templates
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: defult
