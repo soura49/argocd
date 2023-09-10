@@ -1,12 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: appsofapps
+  name: app-of-apps
 spec:
-  project: default
-  source:
-    repoURL: https://github.com/soura49/argocd.git
-    targetRevision: HEAD
-    path: argo-applications
   destination:
-    server: https://kubernetes.default.svc
+    name: in-cluster
+    namespace: argocd
+  source:
+    path: apps
+    repoURL: 'https://github.com/morey-tech/argo-cd-app-of-apps-demo'
+    targetRevision: HEAD
+  project: default
+  
