@@ -11,4 +11,3 @@ spec:
     repoURL: 'https://github.com/soura49/argocd'
     targetRevision: HEAD
   project: default
-  
