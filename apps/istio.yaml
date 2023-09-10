@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://istio-release.storage.googleapis.com/charts
     chart: istio-base
-    targetRevision: '1.19.0'
+    targetRevision: '1.16.0'
   destination:
     namespace: istio-system
     name: in-cluster
